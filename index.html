@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>1.6</title>
+    <style>  
+        body{
+            background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/thumbs/1613369513_190-p-fon-dlya-saita-bezhevii-231.jpg);
+        }
+        tr, td{
+            border: 2px solid rgb(121, 64, 44);
+            border-radius: 5px;
+            text-align: center;
+            width: 10%;
+            height: 80px;
+            background-color: #f5cfc5;
+            color: #493d39;
+            font-family: 'calibri', Times, serif, "Helvetica Neue", Helvetica, sans-serif;
+            font-style: oblique;
+
+        }
+        h2{
+            text-align: center;
+            font-family: 'calibri', Times, serif, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 38px;
+            color: #493d39;
+            font-style: italic;
+
+        }
+        table{
+            padding: 70px 50px 0px 0px;
+        }
+        .img1{
+            display: block;
+            float: left;
+            padding: 0px 0px 0px 10px;
+        }
+        .form{
+            float: right;
+            border: 2px solid rgb(121, 64, 44);
+            border-radius: 5px;
+            text-align: center;
+            width: 250px;
+            background-color: #f5cfc5;
+            padding: 5px 0px 10px 0px;
+        }
+        label{
+            color: #493d39;
+            font-family: 'calibri', Times, serif, "Helvetica Neue", Helvetica, sans-serif;
+            font-style: italic;
+        }
+        input[type="submit"]{
+            background-color: #f29a6b;
+            font-family: 'calibri', Times, serif, "Helvetica Neue", Helvetica, sans-serif;
+            font-style: italic;
+            border: 2px solid rgb(121, 64, 44);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<h2>Розклад навчальних занять</h2> <!-- заголовок -->
+    <table align="center" > <!-- таблиця розкладу -->
+        <tr>
+            <td></td>
+            <td>Понеділок</td>
+            <td>Вівторок</td>
+            <td>Середа</td>
+            <td>Четвер</td>
+            <td>П'ятниця</td>
+            <td>Субота</td>
+        </tr>
+        <tr>
+            <td>8:30-9:15 <br> 9:20-10:05</td>
+            <td>ФВ</td>
+            <td>ІМ</td>
+            <td>ЗВП</td>
+            <td>ФВ</td>
+            <td>ФВ</td>
+            <td>СР</td>
+        </tr>
+        <tr>
+            <td>10:25-11:10 <br> 11:15-12:00</td>
+            <td>ЗВП</td>
+            <td>Право</td>
+            <td>ЗВП</td>
+            <td>Право</td>
+            <td>ТІМ</td>
+            <td>СР</td>
+        </tr>
+        <tr>
+            <td>12:20-13:05 <br> 13:10-13:55</td>
+            <td>ТС</td>
+            <td>ТІК</td>
+            <td>Прогр</td>
+            <td>ТС</td>
+            <td>ТІМ</td>
+            <td>СР</td>
+        </tr>
+        <tr>
+            <td>16:10-16:55 <br> 17:00-17:45</td> 
+            <td>СР</td>
+            <td>СР</td>
+            <td>СР</td>
+            <td>Прогр</td>
+            <td>СР</td>
+            <td>СР</td>
+        </tr>
+<img width=300px height=250px class="img1" src="https://first-school.com.ua/wp-content/uploads/2022/09/kisspng-teacher-school-clip-art-5b3932a7858cd8.070747601530475175547.png" alt="">
+<div class="form"> <!-- блок форми реєстрації -->
+<form action="submit.html" method="POST" target="_blank" onsubmit="return validateForm()">
+    <label for="name">Зареєструватися</label> <br>
+    <label for="name">Ім'я:</label> <br>
+    <input type="text" id="name" name="name" required><br><br> <!-- поле введення імені -->
+
+    <label for="surname">Прізвище:</label> <br>
+    <input type="text" id="surname" name="surname" required><br><br> <!-- поле введення прізвища -->
+
+    <label for="email">Email:</label> <br>
+    <input type="email" id="email" name="email" required><br><br> <!-- поле введення електронної пошти -->
+
+    <label for="password">Пароль:</label> <br>
+    <input type="password" id="password" name="password" required><br><br> <!-- поле введення паролю -->
+
+    <label for="password">Підтвердіть пароль:</label> <br>
+    <input type="password" id="confirm_password" name="confirm_password" required><br><br> <!-- поле підтвердження паролю -->
+
+    <input type="submit" value="Відправити">
+  </form>
+  <!-- перевірка паролю -->
+  <script> 
+    function validateForm() {
+        var password = document.getElementById("password").value;
+        var confirm_password = document.getElementById("confirm_password").value;
+        if (password !==confirm_password ) {
+            alert("Неправильний пароль");
+            return false;
+        }
+        return true;
+    }
+  </script>
+</div>
+</body>
+</html>
